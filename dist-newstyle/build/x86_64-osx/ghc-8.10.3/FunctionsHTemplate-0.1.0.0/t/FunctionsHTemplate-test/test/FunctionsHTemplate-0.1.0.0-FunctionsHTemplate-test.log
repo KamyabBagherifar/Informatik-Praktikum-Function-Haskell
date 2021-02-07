@@ -1,9 +1,0 @@
-Test suite FunctionsHTemplate-test: RUNNING...
-=== prop_commutative from test/Spec.hs:10 ===
-+++ OK, passed 100 tests.
-
-=== prop_commutativeRec from test/Spec.hs:12 ===
-+++ OK, passed 100 tests; 332 discarded.
-
-Test suite FunctionsHTemplate-test: PASS
-Test suite logged to: /Users/krohnu/Documents/praktikumHaskell/FunctionsHTemplate/dist-newstyle/build/x86_64-osx/ghc-8.10.3/FunctionsHTemplate-0.1.0.0/t/FunctionsHTemplate-test/test/FunctionsHTemplate-0.1.0.0-FunctionsHTemplate-test.log
