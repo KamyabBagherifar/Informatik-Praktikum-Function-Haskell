@@ -48,10 +48,95 @@ executable FunctionsHTemplate-exe
     , base >=4.7 && <5
   default-language: Haskell2010
 
+test-suite binom
+  type: exitcode-stdio-1.0
+  main-is: BinomTest.hs
+  other-modules:
+      DeMorganTest
+      FactTest
+      FibTest
+      FunctionsTest
+      GgtTest
+      OperatorsTest
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is BinomTest
+  build-depends:
+      FunctionsHTemplate
+    , QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite demorgan
+  type: exitcode-stdio-1.0
+  main-is: DeMorganTest.hs
+  other-modules:
+      BinomTest
+      FactTest
+      FibTest
+      FunctionsTest
+      GgtTest
+      OperatorsTest
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is DeMorganTest
+  build-depends:
+      FunctionsHTemplate
+    , QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite fact
+  type: exitcode-stdio-1.0
+  main-is: FactTest.hs
+  other-modules:
+      BinomTest
+      DeMorganTest
+      FibTest
+      FunctionsTest
+      GgtTest
+      OperatorsTest
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is FactTest
+  build-depends:
+      FunctionsHTemplate
+    , QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite fib
+  type: exitcode-stdio-1.0
+  main-is: FibTest.hs
+  other-modules:
+      BinomTest
+      DeMorganTest
+      FactTest
+      FunctionsTest
+      GgtTest
+      OperatorsTest
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is FibTest
+  build-depends:
+      FunctionsHTemplate
+    , QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
 test-suite functions
   type: exitcode-stdio-1.0
   main-is: FunctionsTest.hs
   other-modules:
+      BinomTest
+      DeMorganTest
+      FactTest
+      FibTest
+      GgtTest
       OperatorsTest
       Paths_FunctionsHTemplate
   hs-source-dirs:
@@ -63,11 +148,36 @@ test-suite functions
     , base >=4.7 && <5
   default-language: Haskell2010
 
+test-suite ggt
+  type: exitcode-stdio-1.0
+  main-is: GgtTest.hs
+  other-modules:
+      BinomTest
+      DeMorganTest
+      FactTest
+      FibTest
+      FunctionsTest
+      OperatorsTest
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is GgtTest
+  build-depends:
+      FunctionsHTemplate
+    , QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
 test-suite operators
   type: exitcode-stdio-1.0
   main-is: OperatorsTest.hs
   other-modules:
+      BinomTest
+      DeMorganTest
+      FactTest
+      FibTest
       FunctionsTest
+      GgtTest
       Paths_FunctionsHTemplate
   hs-source-dirs:
       test

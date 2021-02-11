@@ -58,3 +58,58 @@ tests:
     dependencies:
       - FunctionsHTemplate
       - QuickCheck
+
+  fact:
+    main:                FactTest
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - FunctionsHTemplate
+      - QuickCheck
+
+  binom:
+    main:                BinomTest
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - FunctionsHTemplate
+      - QuickCheck
+
+  ggt:
+    main:                GgtTest
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - FunctionsHTemplate
+      - QuickCheck
+
+  fib:
+    main:                FibTest
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - FunctionsHTemplate
+      - QuickCheck
+
+  demorgan:
+    main:                DeMorganTest
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - FunctionsHTemplate
+      - QuickCheck
