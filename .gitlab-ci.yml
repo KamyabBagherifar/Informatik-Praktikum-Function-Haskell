@@ -29,3 +29,25 @@ Operators:
     - stack
       --stack-root ${STACK_ROOT}
       test :operators
+
+Functions:
+  stage: test
+  cache:
+    paths:
+      - ${STACK_ROOT}
+      - .stack-work
+  script:
+    - stack
+      --stack-root ${STACK_ROOT}
+      test :functions
+
+Fact:
+  stage: test
+  cache:
+    paths:
+      - ${STACK_ROOT}
+      - .stack-work
+  script:
+    - stack
+      --stack-root ${STACK_ROOT}
+      test :fact
