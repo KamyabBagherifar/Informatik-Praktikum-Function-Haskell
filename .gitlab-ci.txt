@@ -1,0 +1,49 @@
+image: haskell:latest
+
+stages:
+  - build
+  - test
+
+variables:
+  DOCKER_DRIVER: overlay2
+  STACK_ROOT: ${CI_PROJECT_DIR}/.stack
+
+build-job:
+  stage: build
+  cache:
+    key: "$CI_JOB_NAME"
+    paths:
+      - ${STACK_ROOT}
+      - .stack-work
+  script:
+    - stack --stack-root ${STACK_ROOT} build
+
+Operators:
+  stage: test
+  cache:
+    key: "$CI_JOB_NAME"
+    paths:
+      - ${STACK_ROOT}
+      - .stack-work
+  script:
+    - stack --stack-root ${STACK_ROOT} test :operators
+
+Functions:
+  stage: test
+  cache:
+    key: "$CI_JOB_NAME"
+    paths:
+      - ${STACK_ROOT}
+      - .stack-work
+  script:
+    - stack --stack-root ${STACK_ROOT} test :functions
+
+Fact:
+  stage: test
+  cache:
+    key: "$CI_JOB_NAME"
+    paths:
+      - ${STACK_ROOT}
+      - .stack-work
+  script:
+    - stack --stack-root ${STACK_ROOT} test :fact
