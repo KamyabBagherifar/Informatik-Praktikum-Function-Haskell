@@ -6,8 +6,12 @@ stages:
 
 variables:
   DOCKER_DRIVER: overlay2
-  STACK_ROOT: ${CI_PROJECT_DIR}/.stack
+  STACK_ROOT: "${CI_PROJECT_DIR}/.stack-root"
 
+cache:
+  paths:
+    - .stack-work/
+    - .stack-root/
 
 build-job:
   stage: build
