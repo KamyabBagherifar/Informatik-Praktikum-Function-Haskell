@@ -16,24 +16,24 @@ cache:
 build-job:
   stage: build
   script:
-    - stack --stack-root ${STACK_ROOT} build
+    - stack --system-ghc --stack-root ${STACK_ROOT} build
 
 operators:
   stage: test
   script:
-    - stack --stack-root ${STACK_ROOT} test :operators
+    - stack --system-ghc --stack-root ${STACK_ROOT} test :operators
 
 functions:
   stage: test
   script:
-    - stack --stack-root ${STACK_ROOT} test :functions
+    - stack --system-ghc  --stack-root ${STACK_ROOT} test :functions
 
 collatz:
   stage: test
   script:
-    - stack --stack-root ${STACK_ROOT} test :collatz
+    - stack --system-ghc --stack-root ${STACK_ROOT} test :collatz
 
 fact:
   stage: test
   script:
-    - stack --stack-root ${STACK_ROOT} test :fact
+    - stack --system-ghc --stack-root ${STACK_ROOT} test :fact
