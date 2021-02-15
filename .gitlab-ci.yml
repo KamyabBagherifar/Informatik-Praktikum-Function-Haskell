@@ -14,17 +14,22 @@ build-job:
   script:
     - stack --stack-root ${STACK_ROOT} build
 
-Operators:
+operators:
   stage: test
   script:
     - stack --stack-root ${STACK_ROOT} test :operators
 
-Functions:
+functions:
   stage: test
   script:
     - stack --stack-root ${STACK_ROOT} test :functions
 
-Fact:
+collatz:
+  stage: test
+  script:
+    - stack --stack-root ${STACK_ROOT} test :collatz
+
+fact:
   stage: test
   script:
     - stack --stack-root ${STACK_ROOT} test :fact
