@@ -1,6 +1,6 @@
 {-# LANGUAGE TemplateHaskell #-}
 
-module FunctionsTest where
+module CollatzTest where
 import Functions
 
 import Test.QuickCheck
