@@ -3,6 +3,7 @@
 module OperatorsTest where
 
 import Test.QuickCheck
+import System.Exit(exitSuccess, exitFailure)
 
 import Operators
 
@@ -15,4 +16,9 @@ prop_commutativeRec x y = x>0&&y>0 ==> addRec x y == addRec y x
 
 
 return []
-main = $quickCheckAll
+runTests = $quickCheckAll
+
+main = runTests >>= \passed -> if passed then exitSuccess
+                                         else exitFailure
+
+

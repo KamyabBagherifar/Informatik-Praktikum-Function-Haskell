@@ -4,9 +4,15 @@ module GgtTest where
 import Functions
 
 import Test.QuickCheck
+import System.Exit(exitSuccess, exitFailure)
+
 
 -- ggT(a, a) = a
 prop_idempotence a = ggT a a == a
 
 return []
-main = $quickCheckAll
+runTests = $quickCheckAll
+
+main = runTests >>= \passed -> if passed then exitSuccess
+                                         else exitFailure
+
