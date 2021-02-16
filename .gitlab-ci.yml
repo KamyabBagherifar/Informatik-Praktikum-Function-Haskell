@@ -1,12 +1,12 @@
-image: haskell:latest
+image: haskell:8.10.4
 
 stages:
   - build
   - test
 
 variables:
-  DOCKER_DRIVER: overlay2
   STACK_ROOT: "${CI_PROJECT_DIR}/.stack-root"
+  STACK_OPTS: "--fast --system-ghc"
 
 cache:
   paths:
@@ -16,24 +16,26 @@ cache:
 build-job:
   stage: build
   script:
-    - stack --system-ghc --stack-root ${STACK_ROOT} build
+    - ghc --version
+    - stack $STACK_OPTS build
 
 operators:
   stage: test
   script:
-    - stack --system-ghc --stack-root ${STACK_ROOT} test :operators
+    - ghc --version
+    - stack $STACK_OPTS test :operators
 
 functions:
   stage: test
   script:
-    - stack --system-ghc  --stack-root ${STACK_ROOT} test :functions
+    - stack $STACK_OPTS test :functions
 
 collatz:
   stage: test
   script:
-    - stack --system-ghc --stack-root ${STACK_ROOT} test :collatz
+    - stack $STACK_OPTS test :collatz
 
 fact:
   stage: test
   script:
-    - stack --system-ghc --stack-root ${STACK_ROOT} test :fact
+    - stack $STACK_OPTS test :fact
