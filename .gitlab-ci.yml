@@ -6,7 +6,7 @@ stages:
 
 variables:
   STACK_ROOT: "${CI_PROJECT_DIR}/.stack-root"
-  STACK_OPTS: "--fast --system-ghc"
+  STACK_OPTS: "--system-ghc"
 
 cache:
   paths:
