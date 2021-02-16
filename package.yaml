@@ -21,6 +21,8 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- QuickCheck
+
 
 library:
   source-dirs: src
@@ -46,7 +48,6 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - FunctionsHTemplate
-    - QuickCheck
 
   functions:
     main:                FunctionsTest
@@ -57,7 +58,6 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - FunctionsHTemplate
-      - QuickCheck
 
   collatz:
     main:                CollatzTest
@@ -68,7 +68,6 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - FunctionsHTemplate
-      - QuickCheck
 
   fact:
     main:                FactTest
@@ -79,7 +78,6 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - FunctionsHTemplate
-      - QuickCheck
 
   binom:
     main:                BinomTest
@@ -90,7 +88,6 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - FunctionsHTemplate
-      - QuickCheck
 
   ggt:
     main:                GgtTest
@@ -101,7 +98,6 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - FunctionsHTemplate
-      - QuickCheck
 
   fib:
     main:                FibTest
@@ -112,7 +108,6 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - FunctionsHTemplate
-      - QuickCheck
 
   demorgan:
     main:                DeMorganTest
@@ -123,4 +118,3 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - FunctionsHTemplate
-      - QuickCheck
