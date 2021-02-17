@@ -10,7 +10,6 @@ variables:
 operators:
   stage: test
   script:
-    - ghc --version
     - stack $STACK_OPTS test :operators
 
 functions:
@@ -26,4 +25,12 @@ collatz:
 fact:
   stage: test
   script:
+    - stack $STACK_OPTS test :fact
+
+all:
+  stage: test
+  script:
+    - stack $STACK_OPTS test :operators
+    - stack $STACK_OPTS test :functions
+    - stack $STACK_OPTS test :collatz
     - stack $STACK_OPTS test :fact
