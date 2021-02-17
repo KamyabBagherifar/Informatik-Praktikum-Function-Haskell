@@ -21,8 +21,6 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
-- QuickCheck
-
 
 library:
   source-dirs: src
@@ -30,91 +28,108 @@ library:
 executables:
   FunctionsHTemplate-exe:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:
+    - app
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - FunctionsHTemplate
+      - FunctionsHTemplate
 
 tests:
   operators:
     main:                OperatorsTest
-    source-dirs:         test
+    source-dirs:
+      - test
+      - src
     ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - FunctionsHTemplate
+      - QuickCheck
 
   functions:
     main:                FunctionsTest
-    source-dirs:         test
+    source-dirs:
+      - test
+      - src
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - FunctionsHTemplate
+      - QuickCheck
 
   collatz:
     main:                CollatzTest
-    source-dirs:         test
+    source-dirs:
+      - test
+      - src
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - FunctionsHTemplate
+      - QuickCheck
 
   fact:
     main:                FactTest
-    source-dirs:         test
+    source-dirs:
+      - test
+      - src
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - FunctionsHTemplate
+      - QuickCheck
 
   binom:
     main:                BinomTest
-    source-dirs:         test
+    source-dirs:
+      - test
+      - src
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - FunctionsHTemplate
+      - QuickCheck
 
   ggt:
     main:                GgtTest
-    source-dirs:         test
+    source-dirs:
+      - test
+      - src
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - FunctionsHTemplate
+      - QuickCheck
 
   fib:
     main:                FibTest
-    source-dirs:         test
+    source-dirs:
+      - test
+      - src
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - FunctionsHTemplate
+      - QuickCheck
 
   demorgan:
     main:                DeMorganTest
-    source-dirs:         test
+    source-dirs:
+      - test
+      - src
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - FunctionsHTemplate
+      - QuickCheck
