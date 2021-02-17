@@ -1,23 +1,11 @@
 image: haskell:8.8.4
 
 stages:
-  - build
   - test
 
 variables:
   STACK_ROOT: "${CI_PROJECT_DIR}/.stack-root"
   STACK_OPTS: "--system-ghc"
-
-cache:
-  paths:
-    - .stack-work/
-    - .stack-root/
-
-build-job:
-  stage: build
-  script:
-    - ghc --version
-    - stack $STACK_OPTS build
 
 operators:
   stage: test
