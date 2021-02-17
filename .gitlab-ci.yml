@@ -27,10 +27,23 @@ fact:
   script:
     - stack $STACK_OPTS test :fact
 
-all:
+binom:
   stage: test
   script:
-    - stack $STACK_OPTS test :operators
-    - stack $STACK_OPTS test :functions
-    - stack $STACK_OPTS test :collatz
-    - stack $STACK_OPTS test :fact
+    - stack $STACK_OPTS test :binom
+
+ggT:
+  stage: test
+  script:
+    - stack $STACK_OPTS test :ggt
+
+fib:
+  stage: test
+  script:
+    - stack $STACK_OPTS test :fib
+
+deMorgan:
+  stage: test
+  script:
+    - stack $STACK_OPTS test :demorgan
+
