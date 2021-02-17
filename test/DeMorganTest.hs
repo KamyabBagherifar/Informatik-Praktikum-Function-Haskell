@@ -7,7 +7,7 @@ import Test.QuickCheck
 import System.Exit(exitSuccess, exitFailure)
 
 
-
+prop_demorgan = False
 
 return []
 runTests = $quickCheckAll
