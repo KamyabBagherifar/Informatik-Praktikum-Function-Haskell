@@ -33,7 +33,7 @@ You can run all the tests with:
 The following command just runs the Tests in the module CollatzTest:
 
     $ stack test :collatz
-or the Tests in the module FactTest:
+And this one just the Tests in the module FactTest:
   
     $ stack test :fact
 These test-suites are defined in package.yaml.
