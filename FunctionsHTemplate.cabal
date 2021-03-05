@@ -1,0 +1,240 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.3.
+--
+-- see: https://github.com/sol/hpack
+
+name:           FunctionsHTemplate
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/FunctionsHTemplate#readme>
+homepage:       https://github.com/githubuser/FunctionsHTemplate#readme
+bug-reports:    https://github.com/githubuser/FunctionsHTemplate/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/FunctionsHTemplate
+
+library
+  exposed-modules:
+      Composition
+      Functions
+      Operators
+  other-modules:
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable FunctionsHTemplate-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      FunctionsHTemplate
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite binom
+  type: exitcode-stdio-1.0
+  main-is: BinomTest.hs
+  other-modules:
+      CollatzTest
+      DeMorganTest
+      FactTest
+      FibTest
+      FunctionsTest
+      GgtTest
+      OperatorsTest
+      Composition
+      Functions
+      Operators
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is BinomTest
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite collatz
+  type: exitcode-stdio-1.0
+  main-is: CollatzTest.hs
+  other-modules:
+      BinomTest
+      DeMorganTest
+      FactTest
+      FibTest
+      FunctionsTest
+      GgtTest
+      OperatorsTest
+      Composition
+      Functions
+      Operators
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is CollatzTest
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite demorgan
+  type: exitcode-stdio-1.0
+  main-is: DeMorganTest.hs
+  other-modules:
+      BinomTest
+      CollatzTest
+      FactTest
+      FibTest
+      FunctionsTest
+      GgtTest
+      OperatorsTest
+      Composition
+      Functions
+      Operators
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is DeMorganTest
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite fact
+  type: exitcode-stdio-1.0
+  main-is: FactTest.hs
+  other-modules:
+      BinomTest
+      CollatzTest
+      DeMorganTest
+      FibTest
+      FunctionsTest
+      GgtTest
+      OperatorsTest
+      Composition
+      Functions
+      Operators
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is FactTest
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite fib
+  type: exitcode-stdio-1.0
+  main-is: FibTest.hs
+  other-modules:
+      BinomTest
+      CollatzTest
+      DeMorganTest
+      FactTest
+      FunctionsTest
+      GgtTest
+      OperatorsTest
+      Composition
+      Functions
+      Operators
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is FibTest
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite functions
+  type: exitcode-stdio-1.0
+  main-is: FunctionsTest.hs
+  other-modules:
+      BinomTest
+      CollatzTest
+      DeMorganTest
+      FactTest
+      FibTest
+      GgtTest
+      OperatorsTest
+      Composition
+      Functions
+      Operators
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is FunctionsTest
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite ggt
+  type: exitcode-stdio-1.0
+  main-is: GgtTest.hs
+  other-modules:
+      BinomTest
+      CollatzTest
+      DeMorganTest
+      FactTest
+      FibTest
+      FunctionsTest
+      OperatorsTest
+      Composition
+      Functions
+      Operators
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is GgtTest
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite operators
+  type: exitcode-stdio-1.0
+  main-is: OperatorsTest.hs
+  other-modules:
+      BinomTest
+      CollatzTest
+      DeMorganTest
+      FactTest
+      FibTest
+      FunctionsTest
+      GgtTest
+      Composition
+      Functions
+      Operators
+      Paths_FunctionsHTemplate
+  hs-source-dirs:
+      test
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is OperatorsTest
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
