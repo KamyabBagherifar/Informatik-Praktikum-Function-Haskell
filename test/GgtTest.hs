@@ -8,7 +8,7 @@ import System.Exit(exitSuccess, exitFailure)
 
 
 -- ggT(a, a) = a
-prop_idempotence a = ggT a a == a
+prop_idempotence a = a>0 ==> ggT a a == a
 
 return []
 runTests = $quickCheckAll
