@@ -2,7 +2,7 @@
 - Curryfizierung in Haskell
 
 Verwenden Sie das Haskell-Plugin für Intellij so wie im Video
-von Herrn Tobias Werk erläutert. (Siehe Aufgaben, Abschnitt Haskell)
+von Herrn Tobias Werk erläutert:
 
 [Video](https://git.mylab.th-luebeck.de/inf/aufgaben/-/raw/master/HaskellInIntelliJ.mp4)
 
