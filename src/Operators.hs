@@ -1,5 +1,5 @@
 module Operators where
-import Prelude hiding (max,not,odd,even)
+import Prelude hiding (max,not,odd)
 
 add :: Int -> Int -> Int
 add x y  = x + y

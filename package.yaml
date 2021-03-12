@@ -24,6 +24,9 @@ dependencies:
 
 library:
   source-dirs: src
+  when:
+    - condition: false
+      other-modules: Paths_FunctionsHTemplate
 
 executables:
   FunctionsHTemplate-exe:

@@ -27,8 +27,6 @@ library
       Composition
       Functions
       Operators
-  other-modules:
-      Paths_FunctionsHTemplate
   hs-source-dirs:
       src
   build-depends:
