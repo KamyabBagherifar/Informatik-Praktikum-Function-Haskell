@@ -35,8 +35,6 @@ library
 
 executable FunctionsHTemplate-exe
   main-is: Main.hs
-  other-modules:
-      Paths_FunctionsHTemplate
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
