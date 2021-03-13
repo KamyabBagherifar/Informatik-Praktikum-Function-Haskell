@@ -30,9 +30,11 @@ library:
 
 executables:
   FunctionsHTemplate-exe:
-    main:                Main.hs
-    source-dirs:
-    - app
+    main:         Main.hs
+    source-dirs:  app
+    when:
+      - condition: false
+        other-modules: Paths_FunctionsHTemplate
     ghc-options:
     - -threaded
     - -rtsopts
