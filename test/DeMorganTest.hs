@@ -15,3 +15,6 @@ runTests = $quickCheckAll
 main = runTests >>= \passed -> if passed then exitSuccess
                                          else exitFailure
 
+
+                                        
+
