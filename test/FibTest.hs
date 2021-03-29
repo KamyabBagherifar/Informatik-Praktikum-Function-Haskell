@@ -25,7 +25,7 @@ prop_fib_test_3 = do
     n <- choose (1, 30) :: Gen Int
     return $ ggT (fib n) (fib n+1) == 1 
 
-
+-- prop_fib''' n = n > 0 && n < 10 ==> forLoop 0 n 0 == A.fib(n+2)-1
 
 
 
